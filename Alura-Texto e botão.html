@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<input/>
+<button> Clique para divinhar o número</button>
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br> <br>")
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	var numero = Math.round(Math.random() * 10);
+
+	var input = document.querySelector("input");
+
+	function verifica() {
+
+        if(input.value == numero) {
+
+        alert("Parabéns, você acertou!");
+        } else {
+
+        alert("Você errou, o número sorteado era "+ numero + ", recarregue a página e tente novamente");
+        }
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+</script>
