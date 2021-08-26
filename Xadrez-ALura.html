@@ -1,0 +1,94 @@
+<canvas width="800" height="800"></canvas>
+<script>
+	var tela= document.querySelector('canvas')
+	var pincel= tela.getContext('2d')
+
+	function desenhaQuadrado(x, y, cor) {
+		pincel.fillStyle= cor;
+		pincel.fillRect(x, y, 50, 50)
+		pincel.fillStroke = 'red';
+		pincel.strokeRect(x, y, 50, 50)
+	}
+	var x = 0;
+	var y = 0;
+
+	function Linha1() {
+
+			while(x < 800) {
+			desenhaQuadrado(x, y, 'black')
+			x = x + 50;
+			desenhaQuadrado(x, y, 'white')
+			x = x + 50;
+		}
+
+	}
+
+	function Linha2() {
+		y = y + 50;
+		x= 0;
+		while(x < 800){
+			desenhaQuadrado(x, y, 'white')
+			x= x + 50;
+			desenhaQuadrado(x, y, 'black')
+			x= x + 50;
+		}
+
+	}
+
+	function Linha3() {
+		y=y+50;
+		x=0;
+
+			while(x < 800) {
+			desenhaQuadrado(x, y, 'black')
+			x = x + 50;
+			desenhaQuadrado(x, y, 'white')
+			x = x + 50;
+		}
+
+	}
+	function Linha4() {
+		y = y + 50;
+		x = 0;
+
+			while(x < 800) {
+			desenhaQuadrado(x, y, 'white')
+			x = x + 50;
+			desenhaQuadrado(x, y, 'black')
+			x = x + 50;
+		}
+
+	}
+	function Linha5() {
+		y=y+50;
+		x=0;
+
+			while(x < 800){
+				desenhaQuadrado(x, y, 'black')
+				x= x + 50;
+				desenhaQuadrado(x, y, 'white')
+				x= x+ 50;
+			}
+	}
+
+	Linha1();
+	Linha2();
+	Linha3();
+	Linha4();
+	Linha5();
+	Linha2();
+	Linha3();
+	Linha4();
+	Linha5();
+	Linha2();
+	Linha3();
+	Linha4();
+	Linha5();
+	
+	
+	
+
+
+
+	
+</script>
